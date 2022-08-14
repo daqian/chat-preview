@@ -6,6 +6,11 @@
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Fresh Chat" />
     <title>Chat</title>
+    <style>
+      .chat-container .chat-history .joe-message-group li:last-of-type .other-message {
+        background-color:red;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -19,7 +24,7 @@
         var loaded = false;
         s.id = "spd-busns-spt";
         s.async = "async";
-        s.setAttribute("data-self-init", "false");
+        s.setAttribute("data-self-init", "true");
         s.setAttribute("data-init-type", "opt");
         s.src = "https://cdn.freshbots.ai/assets/share/js/freshbots.min.js";
         s.setAttribute(
