@@ -55,7 +55,10 @@
             return;
           },
         },
-        function (successResponse) {},
+        function (successResponse) {
+          console.log(document.getElementById('mobile-chat-container'))
+          document.getElementById('mobile-chat-container').click();
+        },
         function (errorResponse) {}
       );
     });
