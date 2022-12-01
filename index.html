@@ -90,4 +90,26 @@
         // });
     });
 </script>
+<script>
+    function initFreshChat() {
+        window.fcWidget.init({
+          token: "eyJraWQiOiJjdXN0b20tb2F1dGgta2V5aWQiLCJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9",
+          host: "https://wchat.freshchat.com"
+        });
+    }
+    
+    (function(d, id) {
+        var fcJS;
+        if (d.getElementById(id)) {
+            initFreshChat();
+            return;
+        }
+        fcJS = d.createElement('script');
+        fcJS.id = id;
+        fcJS.async = true;
+        fcJS.src = 'https://wchat.freshchat.com/js/widget.js';
+        fcJS.onload = initFreshChat;
+        d.head.appendChild(fcJS);
+    }(document, 'freshchat-js-sdk'));
+</script>
 </html>
