@@ -1,66 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Fresh Chat" />
     <title>Chat</title>
     <style>
-      .chat-container .chat-history .joe-message-group li:last-of-type .other-message {
-        background-color:red;
-      }
-    </style>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div></div>
-  </body>
-  <script>
-    (function (d, w, c) {
-      if (!d.getElementById("spd-busns-spt")) {
-        var n = d.getElementsByTagName("script")[0],
-          s = d.createElement("script");
-        var loaded = false;
-        s.id = "spd-busns-spt";
-        s.async = "async";
-        s.setAttribute("data-self-init", "false");
-        s.setAttribute("data-init-type", "opt");
-        s.src = "https://cdn.freshbots.ai/assets/share/js/freshbots.min.js";
-        s.setAttribute(
-          "data-client",
-          "e35529aa429e495c877b77427fe3b97b5633123f"
-        );
-        s.setAttribute(
-          "data-bot-hash",
-          "46351df3a5dea994e2e6f1d03f796271b8a24a02"
-        );
-        s.setAttribute("data-env", "prod");
-        s.setAttribute("data-region", "us");
-        if (c) {
-          s.onreadystatechange = s.onload = function () {
-            if (!loaded) {
-              c();
-            }
-            loaded = true;
-          };
+        .chat-container
+        .chat-history
+        .joe-message-group
+        li:last-of-type
+        .other-message {
+            background-color: red;
         }
-        n.parentNode.insertBefore(s, n);
-      }
+    </style>
+    <script src='http://fw-cdn.com/1900274/2696355.js' chat='true'>
+</script>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div></div>
+</body>
+<script>
+    (function (d, w, c) {
+        if (!d.getElementById("spd-busns-spt")) {
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script");
+            var loaded = false;
+            s.id = "spd-busns-spt";
+            s.async = "async";
+            s.setAttribute("data-self-init", "false");
+            s.setAttribute("data-init-type", "opt");
+            s.src = "https://cdn.freshbots.ai/assets/share/js/freshbots.min.js";
+            // s.setAttribute(
+            //   "data-client",
+            //   "e35529aa429e495c877b77427fe3b97b5633123f"
+            // );
+            s.setAttribute(
+                "data-client",
+                "e35529aa429e495c877b77427fe3b97b5633123f"
+            );
+            // s.setAttribute(
+            //   "data-bot-hash",
+            //   "46351df3a5dea994e2e6f1d03f796271b8a24a02"
+            // );
+
+            s.setAttribute(
+                "data-bot-hash",
+                "8264c61093de0b23cb4b1c5cc2079596a8249f21"
+            );
+            s.setAttribute("data-env", "prod");
+            s.setAttribute("data-region", "us");
+            if (c) {
+                s.onreadystatechange = s.onload = function () {
+                    if (!loaded) {
+                        c();
+                    }
+                    loaded = true;
+                };
+            }
+            n.parentNode.insertBefore(s, n);
+        }
     })(document, window, function () {
-      Freshbots.initiateWidget(
-        {
-          autoInitChat: false,
-          getClientParams: function () {
-            return;
-          },
-        },
-        function (successResponse) {
-          console.log(document.getElementById('mobile-chat-container'))
-          document.getElementById('mobile-chat-container').click();
-        },
-        function (errorResponse) {}
-      );
+        Freshbots.initiateWidget(
+            {
+                autoInitChat: false,
+                getClientParams: function () {
+                    return;
+                },
+            },
+            function (successResponse) {
+                // console.log(document.getElementById("mobile-chat-container"));
+                // document.getElementById("mobile-chat-container").click();
+            },
+            function (errorResponse) {}
+        );
+        // window.fcWidget.init({
+        //     token: "eyJraWQiOiJjdXN0b20tb2F1dGgta2V5aWQiLCJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmcmVzaGNoYXQiLCJzdWIiOiIwYWE2MWU2MS1iNGRkLTQxOTMtOTIwZS1iMGJjMGE3NTJjZTIiLCJjbGllbnRJZCI6ImZjLTExMWJhNWQ1LWUzNGQtNDg3NC04ZGExLTA3YWRmMWIwOWRjNyIsInNjb3BlIjoiYWdlbnQ6cmVhZCBhZ2VudDpjcmVhdGUgYWdlbnQ6dXBkYXRlIGFnZW50OmRlbGV0ZSBjb252ZXJzYXRpb246Y3JlYXRlIGNvbnZlcnNhdGlvbjpyZWFkIGNvbnZlcnNhdGlvbjp1cGRhdGUgbWVzc2FnZTpjcmVhdGUgbWVzc2FnZTpnZXQgYmlsbGluZzp1cGRhdGUgcmVwb3J0czpmZXRjaCByZXBvcnRzOmV4dHJhY3QgcmVwb3J0czpyZWFkIHJlcG9ydHM6ZXh0cmFjdDpyZWFkIGFjY291bnQ6cmVhZCBkYXNoYm9hcmQ6cmVhZCB1c2VyOnJlYWQgdXNlcjpjcmVhdGUgdXNlcjp1cGRhdGUgdXNlcjpkZWxldGUgb3V0Ym91bmRtZXNzYWdlOnNlbmQgb3V0Ym91bmRtZXNzYWdlOmdldCBtZXNzYWdpbmctY2hhbm5lbHM6bWVzc2FnZTpzZW5kIG1lc3NhZ2luZy1jaGFubmVsczptZXNzYWdlOmdldCBtZXNzYWdpbmctY2hhbm5lbHM6dGVtcGxhdGU6Y3JlYXRlIG1lc3NhZ2luZy1jaGFubmVsczp0ZW1wbGF0ZTpnZXQgZmlsdGVyaW5ib3g6cmVhZCBmaWx0ZXJpbmJveDpjb3VudDpyZWFkIHJvbGU6cmVhZCBpbWFnZTp1cGxvYWQiLCJpc3MiOiJmcmVzaGNoYXQiLCJ0eXAiOiJCZWFyZXIiLCJleHAiOjE5ODU0ODMwNjAsImlhdCI6MTY2OTg2Mzg2MCwianRpIjoiZTIzYjBjZWYtMjhjYi00MDBkLTlkMGQtZTRjMmEzNzhlMmVlIn0.MMMacELnzyiYkHFOAsuZOtBCEJxdfJIvr9HF1FNoe0A",
+        //     host: "https://wchat.freshchat.com",
+        //     // Setting FAQ Tags in the object below.
+        //     faqTags : {
+        //         // Array of Tags
+        //         tags : ['paidusers'],
+        //         //For articles, the below value should be article.
+        //         //For article category, the below value should be category.
+        //         filterType:'category' //Or filterType: 'article'
+        //     },
+        // });
     });
-  </script>
+</script>
 </html>
